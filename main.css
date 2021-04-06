@@ -1,0 +1,12 @@
+body {
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-size: 3rem;
+}
+
+.justify {
+    text-align: justify;
+}
