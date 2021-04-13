@@ -23,7 +23,6 @@ const timeParser = d3.timeParse("%Y-%m-%d %I:%M%p");
 window.onloadFuncs.push(() => {
 
     d3.json('data/tracetogether_reactions.json').then((data)=> {
-        console.log(data);
         data.forEach(d => {d.date = timeParser(d.date + " 06:00AM")});
 
         const width = d3.select('#timeline-wrapper').node().getBoundingClientRect().width;
