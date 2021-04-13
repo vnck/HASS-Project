@@ -36,6 +36,22 @@ const timeseries_options = {
 window.onloadFuncs.push(async () => {
     let data = await d3.json('data/monthyear_aggregated_tracetogether_reactions.json');
 
+    let lineChartArticles = new Chart(
+        document.getElementById('lineChartArticles'), {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'No. of Articles',
+                    data: data.map(d => ({x: d.monthyear, y: Number(d.n)})),
+                    borderColor: 'mediumaquamarine',
+                    fill: false,
+                    tension: 0.3,
+                }],
+            },
+            options: timeseries_options
+        }
+    )
+
     let lineChartLikesAndComments = new Chart(
         document.getElementById('lineChartLikesAndComments'), {
             type: 'line',
