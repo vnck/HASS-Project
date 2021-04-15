@@ -11,51 +11,23 @@ h1, h2 {
     font-weight: 700;
 }
 
-.wrapper {
-    transition: background .2s ease;
-}
-
 .justify {
     text-align: justify;
 }
 
-.timeline-wrapper {
-    position: relative;
+.fig-50 {
+    width: 50%;
 }
 
-.tooltip {
-    background-color: #fff;
-    border: 1px solid #5F428F;
-    font-family: "Source Sans Pro", "Noto Sans", sans-serif;
-    left: 0;
-    max-width: 300px;
-    opacity: 0;
-    padding: calc(16px - 1px); /* border width adjustment */
-    pointer-events: none;
-    border-radius: 5px;
-    position: absolute;
-    top: -8px;
-    transition: opacity 0.1s linear, transform 0.05s ease-in-out;
-    z-index: 1;
+.fig-75 {
+    width: 75%;
 }
 
-.tooltip-date {
-    margin-bottom: 0.2em;
-    font-size: 0.7em;
-    line-height: 1.2;
-    font-weight: 400;
-}
-
-.tooltip-name {
-    margin-bottom: 0.2em;
-    font-size: 1em;
-    line-height: 1.4;
-    font-weight: 700;
-}
-
-.tooltip-description {
-    margin-bottom: 0.2em;
-    font-size: 0.8em;
-    line-height: 1.4;
-    font-weight: 400;
+@media only screen and (max-width: 767.98px) {
+    .fig-50 {
+      width: 80%;
+    }
+    .fig-75 {
+        width: 80%;
+    }
 }
