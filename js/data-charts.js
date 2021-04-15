@@ -178,8 +178,8 @@ window.onloadFuncs.push(async () => {
                     },
                     legend: {
                         labels: {
-                            boxWidth: 20,
-                            boxHeight: 20,
+                            boxWidth: 10,
+                            boxHeight: 10,
                         }
                     },
                     tooltip: {
@@ -285,8 +285,8 @@ window.onloadFuncs.push(async () => {
                     },
                     legend: {
                         labels: {
-                            boxWidth: 20,
-                            boxHeight: 20,
+                            boxWidth: 10,
+                            boxHeight: 10,
                         }
                     },
                     tooltip: {
@@ -343,8 +343,8 @@ window.onloadFuncs.push(async () => {
                     },
                     legend: {
                         labels: {
-                            boxWidth: 20,
-                            boxHeight: 20,
+                            boxWidth: 10,
+                            boxHeight: 10,
                         }
                     },
                     tooltip: {
@@ -401,8 +401,8 @@ window.onloadFuncs.push(async () => {
                     },
                     legend: {
                         labels: {
-                            boxWidth: 20,
-                            boxHeight: 20,
+                            boxWidth: 10,
+                            boxHeight: 10,
                         }
                     },
                     tooltip: {
@@ -447,8 +447,8 @@ window.onloadFuncs.push(async () => {
                     },
                     legend: {
                         labels: {
-                            boxWidth: 20,
-                            boxHeight: 20,
+                            boxWidth: 10,
+                            boxHeight: 10,
                         }
                     },
                     tooltip: {
