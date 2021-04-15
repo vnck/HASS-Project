@@ -69,10 +69,7 @@ window.onloadFuncs.push(async () => {
                     datalabels: {
                         anchor: 'center',
                         align: 'right',
-                        offset: (context) => {
-                            console.log(context);
-                            return context.chart.width / 3 - (context.dataset.data[context.dataIndex].x * context.chart.width / 60); 
-                          },
+                        offset: 120,
                         clip: false,
                         formatter: (value, context) => {
                           return context.dataset.data[context.dataIndex].key_title;
@@ -91,7 +88,7 @@ window.onloadFuncs.push(async () => {
                                 let data = context.dataset.data[context.dataIndex];
                                 let title = data.title;
                                 let t = data.y.split('-');
-                                return `${parseInt(t[2])} ${months[parseInt(t[1])-1]} ${t[0]}: ${title}`;
+                                return `${parseInt(t[2])} ${months[parseInt(t[1])-1]} ${t[0]}: ${title < 120 ? title : title.slice(0,101) + '...'}`;
                             }
                         }
                     }
@@ -466,4 +463,97 @@ window.onloadFuncs.push(async () => {
             }
         }
     )
+
+    let options = [
+        {name: 'Comments', value: 'n_comments', color: 'mediumaquamarine'},
+        {name: 'Likes', value: 'like', color: 'royalblue'},
+        {name: 'Love Reactions', value: 'love', color: 'purple'},
+        {name: 'Haha Reactions', value: 'haha', color: 'mediumorchid'},
+        {name: 'Care Reactions', value: 'care', color: 'palevioletred'},
+        {name: 'Wow Reactions', value: 'wow', color: 'orange'},
+        {name: 'Sad Reactions', value: 'sad', color: 'tomato'},
+        {name: 'Angry Reactions', value: 'angry', color: 'crimson'}
+    ]
+
+    d3.select('#selectMenu')
+        .selectAll('myOptions')
+        .data(options)
+        .enter()
+        .append('option')
+        .text(d => d.name)
+        .attr('value', d => d.value);
+
+    let scatterChartAllHeadlines = new Chart(
+        document.getElementById('scatterChartAllHeadlines'), {
+            type: 'scatter',
+            data : {
+                datasets: [{
+                    label: 'Headlines',
+                    data: headlines.map(d => ({x: d.date, y: d.n_comments, title: d.title})),
+                    borderColor: 'mediumaquamarine',
+                    backgroundColor: 'mediumaquamarine',
+                }]
+            },
+            options: {
+                aspectRatio: 2,
+                display: 'auto',
+                scales: {
+                    x: {
+                        type: 'time',
+                        offset: true,
+                        time: {
+                            unit: 'month',
+                            stepSize: 1,
+                        },
+                        title: {
+                            display: true,
+                            text: 'Date of Publication',
+                        },
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'No. of Comments',
+                        },
+                        type: 'logarithmic',
+                        min: 0.5,
+                        grid: {
+                            display: true,
+                        },
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: (context) => {
+                                t = context[0].raw.x.split('-');
+                                return `${parseInt(t[2])} ${months[parseInt(t[1])-1]} ${t[0]}`
+                            },
+                            label: function(context) {
+                                let data = context.dataset.data[context.dataIndex];
+                                let title = data.title;
+                                let t = data.x.split('-');
+                                return `${parseInt(t[2])} ${months[parseInt(t[1])-1]} ${t[0]}: ${title < 120 ? title : title.slice(0,101) + '...'}`;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    );
+
+    d3.select('#selectMenu').on('change', d => {
+        let selectedOption = d3.select('#selectMenu').property('value');
+        let selectedName = options.filter(x => x.value == selectedOption)[0].name;
+        let selectedColor = options.filter(x => x.value == selectedOption)[0].color;
+        scatterChartAllHeadlines.data.datasets[0].data =  headlines.map(d => ({x: d.date, y: d[selectedOption], title: d.title}));
+        scatterChartAllHeadlines.data.datasets[0].borderColor = selectedColor;
+        scatterChartAllHeadlines.data.datasets[0].backgroundColor = selectedColor;
+        scatterChartAllHeadlines.options.scales.y.title.text = 'No. of ' + selectedName;
+        scatterChartAllHeadlines.update();
+    })
 });
