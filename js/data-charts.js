@@ -36,7 +36,7 @@ window.onloadFuncs.push(async () => {
                 display: 'auto',
                 layout: {
                     padding: {
-                        right: 300,
+                        right: 400,
                     }
                 },
                 scales: {
@@ -70,7 +70,8 @@ window.onloadFuncs.push(async () => {
                         anchor: 'center',
                         align: 'right',
                         offset: (context) => {
-                            return 180 - context.dataset.data[context.dataIndex].x * 15; 
+                            console.log(context);
+                            return context.chart.width / 3 - (context.dataset.data[context.dataIndex].x * context.chart.width / 60); 
                           },
                         clip: false,
                         formatter: (value, context) => {
