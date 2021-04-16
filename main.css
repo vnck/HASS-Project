@@ -23,9 +23,9 @@ h1, h2 {
     width: 75%;
 }
 
-@media only screen and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
     .fig-50 {
-      width: 80%;
+        width: 80%;
     }
     .fig-75 {
         width: 80%;

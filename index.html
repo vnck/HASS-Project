@@ -26,12 +26,12 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFD2B8" fill-opacity="1" d="M0,256L60,218.7C120,181,240,107,360,90.7C480,75,600,117,720,122.7C840,128,960,96,1080,96C1200,96,1320,128,1380,144L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
       </div>
       <div class="container d-flex flex-column align-items-center text-center" style="padding-top: 8rem;">
-        <div class="w-75 mb-5 mt-3">
+        <div class="fig-75 mb-5 mt-3">
         <p class="fs-1">😃🤳😍🤳😢🤳😠🤳</p>
         <h1>Tracing Sentiment on TraceTogether</h1>
         <p><i>Looking at Facebook Reactions to TraceTogether News</i></p>
         </div>
-        <div class="w-75 mb-5">
+        <div class="fig-75 mb-5">
         <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et fringilla tortor, sit amet tincidunt enim. Pellentesque interdum, risus sit amet fringilla consequat, augue neque pharetra ante, id tristique sem justo vel felis. Nunc aliquet mi non auctor egestas. Cras in felis lectus. Proin eget cursus magna. Duis volutpat ultricies vestibulum. Nunc rhoncus accumsan dolor, et consequat mauris imperdiet eget. Vestibulum commodo, dolor at efficitur luctus, neque sapien lobortis nunc, at euismod nulla ligula sit amet nibh. Integer tempus quam sit amet mauris iaculis, eu accumsan eros finibus. Praesent interdum sem eu luctus hendrerit.</p>
       </div>
       </div>
@@ -52,6 +52,7 @@
               <div class='d-flex flex-column align-items-center'>
                 <div class='fig-50 pb-5'>
                   <canvas id='lineChartArticles'></canvas>
+                  <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuLikes' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
                   <canvas id='lineChartLikesAndComments'></canvas>
                 </div>
               </div>
@@ -65,6 +66,7 @@
             <div class='d-flex flex-column align-items-center'>
               <div class='fig-50'>
               <canvas id='barChartSentiments'></canvas>
+              <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuSent' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
               <canvas id='lineChartSentiments'></canvas>
               </div>
             </div>
@@ -79,6 +81,7 @@
               <p class="justify">Sed ante mauris, dapibus id elit nec, ullamcorper rhoncus augue. Praesent eleifend, arcu in dapibus vestibulum, elit felis pretium mauris, ut semper nisl massa non arcu. In hac habitasse platea dictumst. Donec ut convallis turpis, vel rutrum dui. Suspendisse aliquam ex id convallis facilisis. Nunc faucibus hendrerit fermentum. Nam dictum nisl nec ante posuere, at dignissim tellus mattis. Maecenas augue ante, eleifend id sollicitudin et, consectetur sed ante. Nullam suscipit urna id tortor posuere lacinia. Maecenas ultrices quis felis eu placerat. Aenean laoreet id ligula in pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla imperdiet nibh sit amet quam imperdiet fringilla. Phasellus sed nibh in felis viverra tristique. Fusce efficitur lectus dui, vel gravida ipsum finibus eu. Etiam risus elit, lobortis sit amet massa ut, feugiat aliquam ipsum.</p>
               <div class='d-flex flex-column align-items-center'>
                 <div class='fig-50 pb-5'>
+                <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuPos' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
                 <canvas id='lineChartPosSentiments'></canvas>
                 </div>
               </div>
@@ -90,8 +93,8 @@
               <p class="justify">Fusce fringilla malesuada tortor, a aliquam quam posuere tempus. Suspendisse fringilla, tellus quis cursus sollicitudin, dui ante hendrerit quam, et pretium tellus turpis quis quam. Integer ac varius lacus. Nunc ornare, lectus in rhoncus hendrerit, nisl ipsum viverra leo, nec vestibulum massa leo quis felis. Morbi commodo volutpat nunc, ut sollicitudin augue maximus eu. Praesent auctor nibh at sapien lobortis rutrum. Nunc vel feugiat dui, ac aliquam eros. Mauris consequat sapien sodales ullamcorper dictum. Aenean nec gravida augue. Curabitur tristique mi quis rutrum venenatis. In dolor erat, condimentum in gravida nec, semper vel justo. Nullam eget varius felis, at dapibus tortor. Cras eget massa arcu. Quisque porta ac augue eu mollis.</p>
               <div class='d-flex flex-column align-items-center'>
                 <div class='fig-50 pb-5'>
+                <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuNeg' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
                 <canvas id='lineChartNegSentiments'></canvas>
-                <canvas id='lineChartWowSentiments'></canvas>
                 </div>
               </div>
           </div>
