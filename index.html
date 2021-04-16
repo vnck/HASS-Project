@@ -22,22 +22,31 @@
         <script src="js/data-charts.js"></script>
     </head>
     <body>
-      <div style="z-index: -100; position: absolute;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFD2B8" fill-opacity="1" d="M0,256L60,218.7C120,181,240,107,360,90.7C480,75,600,117,720,122.7C840,128,960,96,1080,96C1200,96,1320,128,1380,144L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      </div>
-      <div class="container d-flex flex-column align-items-center text-center" style="padding-top: 8rem;">
-        <div class="fig-75 mb-5 mt-3">
-        <p class="fs-1">😃🤳😍🤳😢🤳😠🤳</p>
-        <h1>Tracing Sentiment on TraceTogether</h1>
-        <p><i>Looking at Facebook Reactions to TraceTogether News</i></p>
+      <div class="container d-flex flex-column align-items-center text-center w-75">
+        <div style="z-index: -100; position: absolute; width: 100%;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFD2B8" fill-opacity="1" d="M0,256L60,218.7C120,181,240,107,360,90.7C480,75,600,117,720,122.7C840,128,960,96,1080,96C1200,96,1320,128,1380,144L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
         </div>
-        <div class="fig-75 mb-5">
-        <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et fringilla tortor, sit amet tincidunt enim. Pellentesque interdum, risus sit amet fringilla consequat, augue neque pharetra ante, id tristique sem justo vel felis. Nunc aliquet mi non auctor egestas. Cras in felis lectus. Proin eget cursus magna. Duis volutpat ultricies vestibulum. Nunc rhoncus accumsan dolor, et consequat mauris imperdiet eget. Vestibulum commodo, dolor at efficitur luctus, neque sapien lobortis nunc, at euismod nulla ligula sit amet nibh. Integer tempus quam sit amet mauris iaculis, eu accumsan eros finibus. Praesent interdum sem eu luctus hendrerit.</p>
+        <div class="mb-5" style="margin-top: 8rem;">
+          <p class="fs-1">😃🤳😍🤳😢🤳😠🤳</p>
+          <h1>Tracing Sentiment on TraceTogether</h1>
+          <p><i>Looking at Facebook Reactions to TraceTogether News</i></p>
+        </div>
+        <div class="mb-5 justify">
+          <p>On the 20 March 2020, GovTech, the digital public services arm of the Singapore Government released TraceTogether<a class="cite" href="https://www.channelnewsasia.com/news/singapore/covid19-trace-together-mobile-app-contact-tracing-coronavirus-12560616">[1]</a>, a contact-tracing solution as part of efforts in containing the COVID-19 pandemic. First released as an app, a physical token was subsequently announced on 7 June 2020<a class="cite" href="https://www.straitstimes.com/singapore/contact-tracing-device-will-not-track-location-and-people-can-use-tracetogether-if-they">[2]</a>.</p>
+          <p>TraceTogether has received mixed reactions from the public ranging from praise as a solution other nations should adopt<a class="cite" href="https://www.bbc.com/news/world-asia-51970379">[3]</a>, privacy and convenience concerns<a class="cite" href="https://lkyspp.nus.edu.sg/ips/news/details/ips-report-on-attitudes-towards-the-use-of-surveillance-technologies-in-the-fight-against-covid-19">[4]</a>, and even attempts at subversive modifications<a class="cite" href="https://www.straitstimes.com/singapore/coronavirus-users-who-allegedly-modified-tracetogether-tokens-could-be-breaking-the-law">[5]</a>.</p>
+          <p>With TraceTogether having been in effect for little over a year old, and a resident up-take of almost 90%<a class="cite" href="https://www.straitstimes.com/singapore/politics/almost-90-per-cent-of-residents-on-tracetogether-programme">[6]</a>, we want to look at how public sentiment on TraceTogether has changed over time.</p>
+          <p>Here, we do a simple sentiment analysis using Facebook reactions to articles shared on the Straits Times Facebook Page<a class="cite" href="https://www.facebook.com/TheStraitsTimes">[7]</a> mentioning TraceTogether.</p>
+        </div>
       </div>
-      </div>
-      <div class='d-flex flex-column align-items-center'>
+      <div class='d-flex flex-column align-items-center mb-5'>
+        <p>A Timeline of TraceTogether News Coverage</p>
         <div class='fig-50'>
           <canvas id='scatterChartHeadlines'></canvas>
+        </div>
+      </div>
+      <div class="container d-flex flex-column w-75">
+        <div class="mb-5 justify">
+          <p>We collected 89 Straits Times articles in total, over the period of 20 March 2020, when TraceTogether was first announced, to 31 February 2021.</p>
         </div>
       </div>
       <div style="background-color: #FFD2B8;">
