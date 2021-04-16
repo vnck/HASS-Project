@@ -39,7 +39,7 @@ window.onloadFuncs.push(async () => {
                     padding: {
                         right: (context) => {
                             if (context.chart.width < 500) {
-                                return context.chart.width / 2;
+                                return context.chart.width / 2.4;
                             } else {
                                 return context.chart.width / 1.6;
                             }
@@ -86,7 +86,7 @@ window.onloadFuncs.push(async () => {
                         clip: false,
                         formatter: (value, context) => {
                             if (context.chart.width < 500) {
-                                return context.dataset.data[context.dataIndex].key_title === null ? '' : context.dataset.data[context.dataIndex].key_title.slice(0,47) + '...';
+                                return context.dataset.data[context.dataIndex].key_title === null ? '' : context.dataset.data[context.dataIndex].key_title.slice(0,36) + '...';
                             } else {
                                 return context.dataset.data[context.dataIndex].key_title;
                             }
