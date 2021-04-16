@@ -40,11 +40,36 @@ a:hover {
     width: 75%;
 }
 
+.chart1 {
+    height: 300px;
+    padding-bottom: 2rem;
+}
+
+.chart2 {
+    height: 320px;
+    padding-bottom: 2rem;
+}
+
+.chart3 {
+    height: 400px;
+    padding-bottom: 2rem;
+}
+
 @media (max-width: 767.98px) {
     .fig-50 {
-        width: 80%;
+        width: 90%;
     }
     .fig-75 {
-        width: 80%;
+        width: 90%;
+    }
+
+    .chart1 {
+        height: 250px;
+    }
+    .chart2 {
+        height: 280px;
+    }
+    .chart3 {
+        height: 300px;
     }
 }

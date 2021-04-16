@@ -33,10 +33,17 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 1,
+                maintainAspectRatio: false,
                 display: 'auto',
                 layout: {
                     padding: {
-                        right: 400,
+                        right: (context) => {
+                            if (context.chart.width < 500) {
+                                return context.chart.width / 2;
+                            } else {
+                                return context.chart.width / 1.6;
+                            }
+                        },
                     }
                 },
                 scales: {
@@ -69,10 +76,20 @@ window.onloadFuncs.push(async () => {
                     datalabels: {
                         anchor: 'center',
                         align: 'right',
-                        offset: 120,
+                        offset: (context) => {
+                            if (context.chart.width < 500) {
+                                return context.chart.width / 4.5;
+                            } else {
+                                return context.chart.width / 3;
+                            }
+                        },
                         clip: false,
                         formatter: (value, context) => {
-                          return context.dataset.data[context.dataIndex].key_title;
+                            if (context.chart.width < 500) {
+                                return context.dataset.data[context.dataIndex].key_title === null ? '' : context.dataset.data[context.dataIndex].key_title.slice(0,47) + '...';
+                            } else {
+                                return context.dataset.data[context.dataIndex].key_title;
+                            }
                         }
                     },
                     legend: {
@@ -112,6 +129,7 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 1.8,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         type: 'time',
@@ -163,6 +181,7 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 1.5,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         type: 'time',
@@ -234,6 +253,7 @@ window.onloadFuncs.push(async () => {
                 }],
             },
             options: {
+                maintainAspectRatio: false,
                 scales: {
                     y: {
                         display: true,
@@ -305,6 +325,7 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 1.5,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         type: 'time',
@@ -393,6 +414,7 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 1.8,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         type: 'time',
@@ -475,6 +497,7 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 1.8,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         type: 'time',
@@ -555,6 +578,7 @@ window.onloadFuncs.push(async () => {
             },
             options: {
                 aspectRatio: 2,
+                maintainAspectRatio: false,
                 display: 'auto',
                 scales: {
                     x: {

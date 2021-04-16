@@ -22,7 +22,7 @@
         <script src="js/data-charts.js"></script>
     </head>
     <body>
-      <div class="container d-flex flex-column align-items-center text-center w-75">
+      <div class="container d-flex flex-column align-items-center text-center fig-75">
         <div style="z-index: -100; position: absolute; width: 100%;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFD2B8" fill-opacity="1" d="M0,256L60,218.7C120,181,240,107,360,90.7C480,75,600,117,720,122.7C840,128,960,96,1080,96C1200,96,1320,128,1380,144L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
         </div>
@@ -40,82 +40,97 @@
       </div>
       <div class='d-flex flex-column align-items-center mb-5'>
         <p>A Timeline of TraceTogether News Coverage</p>
-        <div class='fig-50'>
+        <div class='fig-50' style="height: 600px;">
           <canvas id='scatterChartHeadlines'></canvas>
         </div>
       </div>
-      <div class="container d-flex flex-column w-75">
+      <div class="container d-flex flex-column fig-75">
         <div class="mb-5 justify">
           <p>We collected 89 Straits Times articles in total, over the period of 20 March 2020, when TraceTogether was first announced, to 31 February 2021.</p>
         </div>
       </div>
-      <div style="background-color: #FFD2B8;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fill-opacity="1" d="M0,64L60,85.3C120,107,240,149,360,176C480,203,600,213,720,229.3C840,245,960,267,1080,261.3C1200,256,1320,224,1380,208L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      </div>
       <div>
+        <div style="background-color: #FFD2B8; z-index: -100; position: relative; width: 100%; top: 2px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fill-opacity="1" d="M0,64L60,85.3C120,107,240,149,360,176C480,203,600,213,720,229.3C840,245,960,267,1080,261.3C1200,256,1320,224,1380,208L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+        </div>
         <div style="background-color: #FFD2B8;">
-          <div id="likesAndComments" class="container w-75">
+          <div id="likesAndComments" class="container fig-75">
             <h2>Likes and Comments</h2>
               <p class="justify"> Integer a felis facilisis arcu imperdiet dignissim. Maecenas eu tempor lectus. Etiam at risus efficitur, pulvinar urna at, tempor leo. Nullam sem nisl, luctus ut ultrices a, posuere vel elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vel rhoncus orci, a facilisis felis. Sed convallis est ornare mattis iaculis. Vivamus sed mattis ipsum, eu elementum est.</p>
               <p>Aliquam at felis maximus, vestibulum ex tempus, vestibulum purus. Vivamus a dolor quis nulla vehicula euismod. Suspendisse mauris nunc, cursus sed rhoncus ut, bibendum at ligula. Mauris eu eleifend est. In hac habitasse platea dictumst. Aenean vulputate risus in turpis hendrerit scelerisque. Fusce purus mi, mattis non ullamcorper eu, tempor at erat.</p>
               <div class='d-flex flex-column align-items-center'>
                 <div class='fig-50 pb-5'>
-                  <canvas id='lineChartArticles'></canvas>
+                  <div class='chart1'>
+                    <canvas id='lineChartArticles'></canvas>
+                  </div>
                   <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuLikes' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
-                  <canvas id='lineChartLikesAndComments'></canvas>
+                  <div class='chart2'>
+                    <canvas id='lineChartLikesAndComments'></canvas>
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
         <div style="background-color: #FFD2B8;">
-          <div id="overallSentiment" class="container w-75">
+          <div id="overallSentiment" class="container fig-75">
             <h2>Overall Sentiments</h2>
             <p class="justify">Nulla eleifend nec dui nec pellentesque. Sed lobortis eu justo id mollis. In vel volutpat dolor. Mauris est neque, lobortis nec pharetra at, venenatis ut neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquam diam risus, id varius lacus rutrum vel. Pellentesque a enim sit amet metus volutpat finibus id vitae ex. Pellentesque velit nulla, pellentesque dictum turpis vitae, consectetur tempus erat. Aliquam ullamcorper vulputate tristique. Nulla tristique rutrum pretium.</p>
             <p>Pellentesque sagittis pulvinar justo ut tempor. Pellentesque ultricies quam condimentum felis efficitur, non convallis lectus placerat. Maecenas elit nunc, porta sed purus ac, commodo aliquam tellus. Nullam et felis mollis, dictum tortor ut, congue quam. Nam in molestie est. Sed mollis est vel sem feugiat mattis. Vivamus porttitor id lorem a mattis. Sed tempus, erat vel viverra lobortis, nulla nisl rhoncus dolor, vitae sodales dolor tortor vitae odio. Morbi in ipsum vel ipsum consectetur tempus. In eget sapien scelerisque quam ultrices sollicitudin ac sed ipsum. Ut vel efficitur ipsum, ac volutpat urna. Maecenas lorem diam, elementum quis dolor eget, interdum venenatis ligula. Etiam rhoncus dui in diam ornare dictum. </p>
             <div class='d-flex flex-column align-items-center'>
               <div class='fig-50'>
-              <canvas id='barChartSentiments'></canvas>
+                <div class='chart2'>
+                <canvas id='barChartSentiments'></canvas>
+                </div>
               <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuSent' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
-              <canvas id='lineChartSentiments'></canvas>
+              <div class='chart2'>
+                <canvas id='lineChartSentiments'></canvas>
+              </div>
               </div>
             </div>
           </div>
         </div>
-        <div style="background-color: white;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFD2B8" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,213.3C384,235,480,213,576,218.7C672,224,768,256,864,266.7C960,277,1056,267,1152,250.7C1248,235,1344,213,1392,202.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-        </div>
         <div>
-          <div id="positiveSentiment" class="container w-75">
+          <div style="background-color: white; z-index: -100; position: relative; width: 100%; top: -2px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFD2B8" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,213.3C384,235,480,213,576,218.7C672,224,768,256,864,266.7C960,277,1056,267,1152,250.7C1248,235,1344,213,1392,202.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+          </div>
+          <div id="positiveSentiment" class="container fig-75">
             <h2>Positive Sentiments</h2>
               <p class="justify">Sed ante mauris, dapibus id elit nec, ullamcorper rhoncus augue. Praesent eleifend, arcu in dapibus vestibulum, elit felis pretium mauris, ut semper nisl massa non arcu. In hac habitasse platea dictumst. Donec ut convallis turpis, vel rutrum dui. Suspendisse aliquam ex id convallis facilisis. Nunc faucibus hendrerit fermentum. Nam dictum nisl nec ante posuere, at dignissim tellus mattis. Maecenas augue ante, eleifend id sollicitudin et, consectetur sed ante. Nullam suscipit urna id tortor posuere lacinia. Maecenas ultrices quis felis eu placerat. Aenean laoreet id ligula in pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla imperdiet nibh sit amet quam imperdiet fringilla. Phasellus sed nibh in felis viverra tristique. Fusce efficitur lectus dui, vel gravida ipsum finibus eu. Etiam risus elit, lobortis sit amet massa ut, feugiat aliquam ipsum.</p>
               <div class='d-flex flex-column align-items-center'>
                 <div class='fig-50 pb-5'>
                 <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuPos' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
-                <canvas id='lineChartPosSentiments'></canvas>
+                <div class='chart2'>
+                  <canvas id='lineChartPosSentiments'></canvas>
+                </div>
                 </div>
               </div>
             </div>
         </div>
         <div>
-          <div id="negativeSentiment" class="container w-75">
+          <div id="negativeSentiment" class="container fig-75">
             <h2>Negative Sentiments</h2>
               <p class="justify">Fusce fringilla malesuada tortor, a aliquam quam posuere tempus. Suspendisse fringilla, tellus quis cursus sollicitudin, dui ante hendrerit quam, et pretium tellus turpis quis quam. Integer ac varius lacus. Nunc ornare, lectus in rhoncus hendrerit, nisl ipsum viverra leo, nec vestibulum massa leo quis felis. Morbi commodo volutpat nunc, ut sollicitudin augue maximus eu. Praesent auctor nibh at sapien lobortis rutrum. Nunc vel feugiat dui, ac aliquam eros. Mauris consequat sapien sodales ullamcorper dictum. Aenean nec gravida augue. Curabitur tristique mi quis rutrum venenatis. In dolor erat, condimentum in gravida nec, semper vel justo. Nullam eget varius felis, at dapibus tortor. Cras eget massa arcu. Quisque porta ac augue eu mollis.</p>
               <div class='d-flex flex-column align-items-center'>
                 <div class='fig-50 pb-5'>
                 <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuNeg' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
-                <canvas id='lineChartNegSentiments'></canvas>
+                <div class='chart2'>
+                  <canvas id='lineChartNegSentiments'></canvas>
+                </div>
                 </div>
               </div>
           </div>
         </div>
         <div>
-          <div id="Conclusion" class="container w-75">
+          <div id="Conclusion" class="container fig-75">
             <h2>Try it Yourself!</h2>
             <p class="justify">Sed laoreet egestas orci nec dapibus. Praesent pretium sollicitudin odio. Sed non fermentum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut lectus fermentum, fermentum purus nec, faucibus orci. Fusce vulputate enim nec tortor pellentesque rutrum. Aenean eu viverra ex.</p>
             <div class='d-flex flex-column align-items-center'>
               <div class='fig-75 pb-5'>
                 <div class='d-flex align-items-center'><span class="pe-3">Sort the data by...</span><select id='selectMenu' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
-                <canvas id='scatterChartAllHeadlines'></canvas>
+                <div class='chart3'>
+                  <canvas id='scatterChartAllHeadlines'></canvas>
+                </div>
               </div>
             </div>
             <p>Fusce accumsan enim sit amet leo mattis, at hendrerit lectus dapibus. In hac habitasse platea dictumst. Sed volutpat lectus id imperdiet condimentum. Integer dui lacus, luctus non ex iaculis, iaculis dapibus libero. Aenean quis lacinia lacus. Etiam eu odio placerat, finibus magna quis, pulvinar sem. Sed et vehicula odio. Nullam lobortis, lorem id accumsan finibus, orci turpis ornare ante, vitae vulputate lacus justo vel sem. Vivamus consequat quam ac odio pulvinar, id dictum purus efficitur.</p>
