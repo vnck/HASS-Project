@@ -55,6 +55,33 @@ a:hover {
     padding-bottom: 2rem;
 }
 
+.angry {
+    color: crimson;
+}
+
+.sad {
+    color: tomato;
+}
+
+.likes {
+    color: royalblue;
+}
+
+.wow {
+    color: orange;
+}
+
+.haha {
+    color: mediumorchid;
+}
+
+.care {
+    color: palevioletred;
+}
+
+.love {
+    color: purple;
+}
 @media (max-width: 767.98px) {
     .fig-50 {
         width: 90%;
