@@ -263,7 +263,7 @@ window.onloadFuncs.push(async () => {
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Total No. of Reactions',
+                        text: 'Total No. of Reactions on a log axis',
                     },
                     legend: {
                         display: false
