@@ -5,6 +5,11 @@ body {
     
 }
 
+p {
+    margin: 0;
+    padding-bottom:1rem;
+}
+
 h1, h2 {
     font-size: 3rem;
     font-family: 'Nunito', sans-serif !important;
