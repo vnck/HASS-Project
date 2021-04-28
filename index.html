@@ -47,7 +47,7 @@
       </div>
       <div class="container d-flex flex-column fig-75">
         <div class="mb-5 justify">
-          <p>We collected 89 Straits Times articles in total, over the period of 20 March 2020, when TraceTogether was first announced, to 31 February 2021.</p>
+          <p>We found 89 Straits Times articles in total, over the period of 20 March 2020, when TraceTogether was first announced, to 31 February 2021.</p>
         </div>
       </div>
       <div>
@@ -58,8 +58,7 @@
           <div id="likesAndComments" class="container fig-75">
             <h2>Likes and Comments</h2>
               <p class="justify">
-                Likes are the generic way to react to posts on Facebook. Hence, we separated them from the other more emotive reactions. 
-                Instead, we see Likes as a form of acknowledgement of the news article published, rather than a positive reaction (Haha, Love, Care). </p>
+                We have separated Likes from the other more emotive reactions as we see Likes as a form of acknowledgement of the news article published, rather than a positive reaction (Haha, Love, Care).</p>
                 <p class="justify">  
                 Overall, the number of articles about TraceTogether being published increased over the months, with the exception of June to September 2020, where no articles about TraceTogether were published. 
                 This 'dry spell' could be due to the articles not being uploaded onto Facebook, or due to Facebook's algorithm not bringing it up.
@@ -126,23 +125,27 @@
             </div>
         </div>
         <div>
-          <div id="negativeSentiment" class="container fig-75">
+          <div id="negativeSentiment" class="container fig-75 pb-5">
             <h2>Negative Sentiments</h2>
-              <p class="justify">Fusce fringilla malesuada tortor, a aliquam quam posuere tempus. Suspendisse fringilla, tellus quis cursus sollicitudin, dui ante hendrerit quam, et pretium tellus turpis quis quam. Integer ac varius lacus. Nunc ornare, lectus in rhoncus hendrerit, nisl ipsum viverra leo, nec vestibulum massa leo quis felis. Morbi commodo volutpat nunc, ut sollicitudin augue maximus eu. Praesent auctor nibh at sapien lobortis rutrum. Nunc vel feugiat dui, ac aliquam eros. Mauris consequat sapien sodales ullamcorper dictum. Aenean nec gravida augue. Curabitur tristique mi quis rutrum venenatis. In dolor erat, condimentum in gravida nec, semper vel justo. Nullam eget varius felis, at dapibus tortor. Cras eget massa arcu. Quisque porta ac augue eu mollis.</p>
+              <p class="justify">We consider the Angry, Sad, and Wow reactions to express negative sentiment, with Angry reactions being stronger than Sad reactions. Wow reactions are a mixed bag, expressing surprise which can be both positive and negative.</p>
               <div class='d-flex flex-column align-items-center'>
-                <div class='fig-50 pb-5'>
+                <div class='fig-50 pb-2'>
                 <div class='d-flex align-items-center'><span class="pe-3">View the data as...</span><select id='selectMenuNeg' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
                 <div class='chart2'>
                   <canvas id='lineChartNegSentiments'></canvas>
                 </div>
                 </div>
               </div>
+              <p class="justify">When TraceTogether was first announced<a class="cite" href="https://www.channelnewsasia.com/news/singapore/covid19-trace-together-mobile-app-contact-tracing-coronavirus-12560616">[1]</a>, people were more Sad than Angry about this new contact tracing technology. They were mostly concerned about the effectiveness of the solution (Was another app really necessary?) as well as concerns on privacy.</p>
+              <p class="justify">However, an opinion piece published in May 2020 calling for the mandatory use of TraceTogether sparked this unhappiness into anger as, expectedly, no one likes the idea of being compelled to use an app. This marked a similiar response to previous attempts by the Singapore government to force their apps onto us<a class="cite" href="https://www.todayonline.com/singapore/new-mobile-app-serve-eyes-and-ears-during-emergencies">[1]</a><a class="cite" href="https://www.straitstimes.com/singapore/disgruntled-nsmen-leave-bad-reviews-on-sgsecure-app-mindef-says-download-is-a-must-for-all">[1]</a>.</p>
+              <p class="justify">This initial burst of negative sentiments would then be repeated again in October 2020 when the government did announce mandatory TraceTogether use in public<a class="cite" href="https://www.straitstimes.com/singapore/checking-in-with-tracetogether-to-be-compulsory-at-public-venues-by-december">[1]</a>.</p>
+              <p>The most recent peak in negative sentiments would then be in January 2021, with the announcement that TraceTogether had been used for criminal investigation back in May 2020<a class="cite" href="https://www.straitstimes.com/singapore/courts-crime/tracetogether-data-accessed-for-murder-investigation-in-may">[1]</a>, even before the promise made in June that the technology would only be used for contact-tracing purposes<a class="cite" href="https://www.facebook.com/watch/?v=2746788608869241">[1]</a>. This breach of public trust led sentiment towards TraceTogether to plummet, which has yet to recover.</p>
           </div>
         </div>
         <div>
           <div id="Conclusion" class="container fig-75">
             <h2>Try it Yourself!</h2>
-            <p class="justify">Sed laoreet egestas orci nec dapibus. Praesent pretium sollicitudin odio. Sed non fermentum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ut lectus fermentum, fermentum purus nec, faucibus orci. Fusce vulputate enim nec tortor pellentesque rutrum. Aenean eu viverra ex.</p>
+            <p class="justify">Here, we have displayed every article as a single point to be explored, which can be sorted according to the various reactions. You'll be able to identify which specific article induced a large shift in sentiment.</p>
             <div class='d-flex flex-column align-items-center'>
               <div class='fig-75 pb-5'>
                 <div class='d-flex align-items-center'><span class="pe-3">Sort the data by...</span><select id='selectMenu' class='form-select mt-3 mb-3' style='width: min-content;'></select></div>
@@ -151,7 +154,9 @@
                 </div>
               </div>
             </div>
-            <p>Fusce accumsan enim sit amet leo mattis, at hendrerit lectus dapibus. In hac habitasse platea dictumst. Sed volutpat lectus id imperdiet condimentum. Integer dui lacus, luctus non ex iaculis, iaculis dapibus libero. Aenean quis lacinia lacus. Etiam eu odio placerat, finibus magna quis, pulvinar sem. Sed et vehicula odio. Nullam lobortis, lorem id accumsan finibus, orci turpis ornare ante, vitae vulputate lacus justo vel sem. Vivamus consequat quam ac odio pulvinar, id dictum purus efficitur.</p>
+            <p class="justify">Even as the increasing positive sentiment suggests that we have normalised the use of TraceTogether and other contact-tracing solutions into our daily routines, we should not depend on moments of controversy to evaluate what these technologies mean for our personal privacy and use of public space.</p>
+            <p class="justify">It remains to be seen how long TraceTogether would remain in our lives. While the government promises that this national contact-tracing programme will be shut down once the pandemic is over<a class="cite" href="https://www.straitstimes.com/singapore/politics/parliament-tracetogether-programme-to-be-stood-down-after-pandemic">[1]</a>, recent development in TraceTogether infrastructure suggests that they will be more permanent fixtures.<a class="cite" href="https://www.channelnewsasia.com/news/singapore/safe-entry-gateway-device-trial-trace-together-downtown-east-13657180">[1]</a></p>
+            <p class="justify">While using Facebook reactions to perform a sentiment analysis is tenuous and cannot fully encapsulate the true sentiments of the public, we hope that these visualisations provide grounds for kickstarting important conversations on what TraceTogether and other contact-tracing solutions mean for our daily living.</p>
           </div>
         </div>
       </div>
