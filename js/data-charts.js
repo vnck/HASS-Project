@@ -27,8 +27,8 @@ window.onloadFuncs.push(async () => {
                 datasets: [{
                     label: 'Headlines',
                     data: headlines.map(d => ({y: d.date, x: d.count, title: d.title, key_title: d.key_title})),
-                    borderColor: headlines.map(d => d.key_title ? 'mediumaquamarine' : 'mediumaquamarine'),
-                    backgroundColor: headlines.map(d => d.key_title ? 'mediumaquamarine' : 'mediumaquamarine'),
+                    borderColor: headlines.map(d => d.key_title ? 'coral' : 'coral'),
+                    backgroundColor: headlines.map(d => d.key_title ? 'coral' : 'coral'),
                 }]
             },
             options: {
