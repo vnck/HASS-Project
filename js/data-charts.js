@@ -27,8 +27,8 @@ window.onloadFuncs.push(async () => {
                 datasets: [{
                     label: 'Headlines',
                     data: headlines.map(d => ({y: d.date, x: d.count, title: d.title, key_title: d.key_title})),
-                    borderColor: headlines.map(d => d.key_title ? 'palevioletred' : 'mediumaquamarine'),
-                    backgroundColor: headlines.map(d => d.key_title ? 'palevioletred' : 'mediumaquamarine'),
+                    borderColor: headlines.map(d => d.key_title ? 'mediumaquamarine' : 'mediumaquamarine'),
+                    backgroundColor: headlines.map(d => d.key_title ? 'mediumaquamarine' : 'mediumaquamarine'),
                 }]
             },
             options: {
@@ -245,11 +245,11 @@ window.onloadFuncs.push(async () => {
         document.getElementById('barChartSentiments'), {
             type: 'bar',
             data: {
-                labels: ['Like','Love','Haha','Care','Wow','Sad','Angry'],
+                labels: ['Love','Haha','Care','Wow','Sad','Angry'],
                 datasets: [{
                     label: 'Reactions',
-                    data: [52230,6598,6261,498,1326,516,2433],
-                    backgroundColor: ['royalblue','purple','mediumorchid','palevioletred','orange','tomato','crimson'],
+                    data: [6598,6261,498,1326,516,2433],
+                    backgroundColor: ['purple','mediumorchid','palevioletred','orange','tomato','crimson'],
                 }],
             },
             options: {
@@ -257,13 +257,13 @@ window.onloadFuncs.push(async () => {
                 scales: {
                     y: {
                         display: true,
-                        type: 'logarithmic',
+                        type: 'linear',
                     }
                 },
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Total No. of Reactions on a log axis',
+                        text: 'Total No. of Reactions',
                     },
                     legend: {
                         display: false
