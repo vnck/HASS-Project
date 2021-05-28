@@ -1,5 +1,5 @@
-# HASS-Project
+# Tracing TraceTogether Sentiment
 
-Work-In-Progress.
+A dataviz essay exploring Facebook reactions to Strait Times news articles on TraceTogether.
 
 By Eva Aldridge and Ivan Chuang
